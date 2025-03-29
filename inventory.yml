@@ -1,1 +1,2 @@
-ansibleteste ansible_host=10.192.66.165
+# ansibleteste ansible_host=10.192.66.165
+ ansibleteste ansible_host=10.192.66.215

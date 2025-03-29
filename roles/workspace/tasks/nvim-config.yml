@@ -2,7 +2,6 @@
   ansible.builtin.file:
     path: /home/matheus/.config/nvim
     state: directory
-    recurse: yes
     owner: matheus
     group: matheus
 
@@ -10,6 +9,8 @@
   ansible.builtin.git:
     repo: https://github.com/Matheus-git/nvim-plugins.git
     dest: /home/matheus/.config/nvim
+    version: main
+  become: true
   ignore_errors: yes
 
 - name: Change permissions of a directory and its contents
