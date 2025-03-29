@@ -31,7 +31,9 @@ Setting up a remote workspace environment using Ansible roles
     ```
 3. Add host(s) to the inventory.yml
 
-4. Run the playbook:
+4. Edit roles/workspace/vars/main.yml ( password: password )
+
+5. Run the playbook:
     ```
       ansible-playbook -i inventory.yml workspace_playbook.yml
     ```
