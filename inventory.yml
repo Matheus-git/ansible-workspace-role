@@ -1,2 +1,1 @@
-# ansibleteste ansible_host=10.192.66.165
  ansibleteste ansible_host=10.192.66.201 ansible_ssh_extra_args='-o StrictHostKeyChecking=no' ansible_ssh_user=ansible

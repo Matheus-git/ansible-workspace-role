@@ -1,18 +1,18 @@
-- name: Atualização de pacotes/sistema
+- name: System/Package Update
   import_tasks: update.yml
 
-- name: Instalação de pacotes gerais
+- name: General Package Installation
   import_tasks: install-packages.yml
 
-- name: Install docker
+- name: Install Docker
   import_tasks: install-docker.yml
 
 - name: Create user 'matheus'
   import_tasks: create-user.yml
 
-- name: Nvim config
+- name: Nvim Configuration
   import_tasks: nvim-config.yml
 
-- name: Git config
+- name: Git Configuration
   import_tasks: git-config.yml
 

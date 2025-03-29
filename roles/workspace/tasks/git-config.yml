@@ -1,4 +1,4 @@
-- name: Git config
+- name: Clone git config repository
   ansible.builtin.git:
     repo: https://github.com/Matheus-git/git-config.git
     dest: /temp/git-config
@@ -7,13 +7,16 @@
   become: true
   ignore_errors: yes
 
-- name: Copy file with owner and permission, using symbolic representation
+- name: Copy files with owner and permissions using symbolic representation
   ansible.builtin.shell:
     cmd: |
       chown -R matheus:matheus /temp/git-config &&
-      rsync -a /temp/git-config/ /home/matheus 
+      rsync -a /temp/git-config/ /home/matheus
+  become: true
 
 - name: Remove temporary directory
   ansible.builtin.file:
-    path: /tmp/git-config
+    path: /temp/git-config
     state: absent
+  become: true
+

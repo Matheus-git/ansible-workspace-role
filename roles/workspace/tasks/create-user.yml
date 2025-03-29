@@ -9,13 +9,14 @@
     ssh_key_bits: 4096
     ssh_key_file: .ssh/id_ed25519
     ssh_key_type: ed25519
-    password: $6$fumB4XdK2a6Pckws$PIMh2kAiVBu1wHg7xXgdyEjAxkNqRR4pBMChcEVYzQxmYV96iVNT8KD9APjfnV41Wfbga3wV2BvpLj64E.rhC/ 
+    password: "$6$fumB4XdK2a6Pckws$PIMh2kAiVBu1wHg7xXgdyEjAxkNqRR4pBMChcEVYzQxmYV96iVNT8KD9APjfnV41Wfbga3wV2BvpLj64E.rhC/"
     state: present
 
-- name: Adicionar chave SSH ao authorized_keys
+- name: Add SSH public key to authorized_keys for user 'matheus'
   ansible.builtin.authorized_key:
     user: matheus
     state: present
-    key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQdkge/GgNwHJAdWtThrxqRKSvjtdvx9EgLy+nB3gk1 mathiew0@gmail.com
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQdkge/GgNwHJAdWtThrxqRKSvjtdvx9EgLy+nB3gk1 mathiew0@gmail.com"
     path: /home/matheus/.ssh/authorized_keys
     manage_dir: yes
+

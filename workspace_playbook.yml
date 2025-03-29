@@ -1,5 +1,17 @@
-- name: Hello World Playbook
+- name: Workspace Playbook  
   hosts: ansibleteste
   become: true
-  roles:
-    - workspace
+  tasks:
+    - name: Check if the OS is Ubuntu
+      ansible.builtin.assert:
+        that:
+          - ansible_facts.os_family == "Debian"
+          - ansible_facts.distribution == "Ubuntu"
+        fail_msg: "This playbook is only supported on Ubuntu."
+        success_msg: "Ubuntu detected, continuing with the tasks."
+
+    - name: Run workspace role if Ubuntu
+      include_role:
+        name: workspace
+      when: ansible_facts.os_family == "Debian" and ansible_facts.distribution == "Ubuntu"
+

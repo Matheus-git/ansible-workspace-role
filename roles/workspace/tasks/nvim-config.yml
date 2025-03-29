@@ -1,11 +1,11 @@
-- name: Create directory nvim config
+- name: Create nvim config directory
   ansible.builtin.file:
     path: /home/matheus/.config/nvim
     state: directory
     owner: matheus
     group: matheus
 
-- name: Download config nvim
+- name: Download nvim config
   ansible.builtin.git:
     repo: https://github.com/Matheus-git/nvim-plugins.git
     dest: /home/matheus/.config/nvim
@@ -13,10 +13,11 @@
   become: true
   ignore_errors: yes
 
-- name: Change permissions of a directory and its contents
+- name: Change permissions of nvim config directory and its contents
   ansible.builtin.file:
     path: /home/matheus/.config
     mode: '0755'
     owner: matheus
     group: matheus
     recurse: yes
+
