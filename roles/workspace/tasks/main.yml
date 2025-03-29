@@ -1,7 +1,7 @@
 - name: Atualização de pacotes/sistema
   import_tasks: update.yml
 
-- name: Instalação de pacotes
+- name: Instalação de pacotes gerais
   import_tasks: install-packages.yml
 
 - name: Install docker
@@ -10,3 +10,5 @@
 - name: Nvim config
   import_tasks: nvim-config.yml
 
+- name: Create user 'matheus'
+  import_tasks: create-user.yml

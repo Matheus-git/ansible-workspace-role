@@ -1,21 +1,21 @@
 - name: Create directory nvim config
   ansible.builtin.file:
-    path: /home/ansible/.config/nvim
+    path: /home/matheus/.config/nvim
     state: directory
     recurse: yes
-    owner: ansible
-    group: ansible
+    owner: matheus
+    group: matheus
 
 - name: Download config nvim
   ansible.builtin.git:
     repo: https://github.com/Matheus-git/nvim-plugins.git
-    dest: /home/ansible/.config/nvim
+    dest: /home/matheus/.config/nvim
   ignore_errors: yes
 
 - name: Change permissions of a directory and its contents
   ansible.builtin.file:
-    path: /home/ansible/.config
+    path: /home/matheus/.config
     mode: '0755'
-    owner: ansible
-    group: ansible
+    owner: matheus
+    group: matheus
     recurse: yes

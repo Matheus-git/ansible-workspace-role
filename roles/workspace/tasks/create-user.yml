@@ -1,0 +1,23 @@
+- name: Create a user 'matheus' with a home directory
+  ansible.builtin.user:
+    name: matheus
+    create_home: yes
+    shell: /bin/bash
+    generate_ssh_key: yes
+    ssh_key_bits: 4096
+    ssh_key_file: .ssh/id_ed25519
+    ssh_key_type: ed25519
+    password: $6$fumB4XdK2a6Pckws$PIMh2kAiVBu1wHg7xXgdyEjAxkNqRR4pBMChcEVYzQxmYV96iVNT8KD9APjfnV41Wfbga3wV2BvpLj64E.rhC/ 
+
+- name: Create directory nvim config
+  ansible.builtin.file:
+    path: /home/matheus/.ssh/authorized_keys
+    state: file
+    owner: matheus
+    group: matheus
+
+- name: Adicionar uma linha ao arquivo
+  ansible.builtin.lineinfile:
+    path: /home/matheus/.ssh/authorized_keys
+    line: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQdkge/GgNwHJAdWtThrxqRKSvjtdvx9EgLy+nB3gk1 mathiew0@gmail.com
+    create: yes
