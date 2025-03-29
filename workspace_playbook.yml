@@ -1,5 +1,5 @@
 - name: Workspace Playbook  
-  hosts: ansibleteste
+  hosts: ansibletest
   become: true
   tasks:
     - name: Check if the OS is Ubuntu

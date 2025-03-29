@@ -1,1 +1,1 @@
- ansibleteste ansible_host=10.192.66.215 ansible_ssh_extra_args='-o StrictHostKeyChecking=no' ansible_ssh_user=ansible
+ ansibletest ansible_host=10.192.66.215 ansible_ssh_extra_args='-o StrictHostKeyChecking=no' ansible_ssh_user=ansible
