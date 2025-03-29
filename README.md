@@ -2,7 +2,7 @@
 
 ![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white) ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 
-Setting up a remote workspace environment using Ansible roles
+Setting up a workspace environment using Ansible roles
 
 **This project was developed in just a few hours as part of a training exercise over the weekend.**
 
