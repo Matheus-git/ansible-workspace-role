@@ -10,8 +10,8 @@
 - name: Copy files with owner and permissions using symbolic representation
   ansible.builtin.shell:
     cmd: |
-      chown -R matheus:matheus /temp/git-config &&
-      rsync -a /temp/git-config/ /home/matheus
+      chown -R {{ user_name }}:{{ user_name }} /temp/git-config &&
+      rsync -a /temp/git-config/ /home/{{ user_name }}
   become: true
 
 - name: Remove temporary directory

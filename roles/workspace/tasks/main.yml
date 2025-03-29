@@ -7,7 +7,7 @@
 - name: Install Docker
   import_tasks: install-docker.yml
 
-- name: Create user 'matheus'
+- name: Create user '{{ user_name }}'
   import_tasks: create-user.yml
 
 - name: Nvim Configuration

@@ -1,2 +1,5 @@
 ---
-# vars file for workspace
+user_name: matheus
+user_pass: $6$fumB4XdK2a6Pckws$PIMh2kAiVBu1wHg7xXgdyEjAxkNqRR4pBMChcEVYzQxmYV96iVNT8KD9APjfnV41Wfbga3wV2BvpLj64E.rhC/
+ssh_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQdkge/GgNwHJAdWtThrxqRKSvjtdvx9EgLy+nB3gk1 mathiew0@gmail.com"
+
