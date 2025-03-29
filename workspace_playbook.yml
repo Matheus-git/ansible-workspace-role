@@ -1,7 +1,5 @@
----
 - name: Hello World Playbook
   hosts: ansibleteste
-  tasks:
-    - name: Imprimir Hello World
-      debug:
-        msg: "Hello, World!"
+  become: true
+  roles:
+    - workspace

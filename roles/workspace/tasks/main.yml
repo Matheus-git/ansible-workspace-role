@@ -1,2 +1,12 @@
----
-# tasks file for workspace
+- name: Atualização de pacotes/sistema
+  import_tasks: update.yml
+
+- name: Instalação de pacotes
+  import_tasks: install-packages.yml
+
+- name: Install docker
+  import_tasks: install-docker.yml
+
+- name: Nvim config
+  import_tasks: nvim-config.yml
+
