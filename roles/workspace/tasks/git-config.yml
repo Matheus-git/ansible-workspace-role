@@ -1,0 +1,19 @@
+- name: Git config
+  ansible.builtin.git:
+    repo: https://github.com/Matheus-git/git-config.git
+    dest: /temp/git-config
+    force: yes
+    version: main
+  become: true
+  ignore_errors: yes
+
+- name: Copy file with owner and permission, using symbolic representation
+  ansible.builtin.shell:
+    cmd: |
+      chown -R matheus:matheus /temp/git-config &&
+      rsync -a /temp/git-config/ /home/matheus 
+
+- name: Remove temporary directory
+  ansible.builtin.file:
+    path: /tmp/git-config
+    state: absent

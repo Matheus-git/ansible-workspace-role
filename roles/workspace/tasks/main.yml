@@ -13,4 +13,6 @@
 - name: Nvim config
   import_tasks: nvim-config.yml
 
+- name: Git config
+  import_tasks: git-config.yml
 
